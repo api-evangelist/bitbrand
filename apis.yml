@@ -1,23 +1,69 @@
 aid: bitbrand
+
 name: Bitbrand
-description: 'Bitbrand is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: Bitbrand is a digital marketplace specializing in watch faces and collectible digital art. The platform showcases a variety of themed
+  collections, ranging from kawaii characters to collaborations with artists and brands. Users can browse, purchase, and download watch face designs
+  for smart devices, with detailed artist profiles and licensing information provided for each collection.
+
 url: https://raw.githubusercontent.com/api-evangelist/bitbrand/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-28 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-28'
+
 modified: '2026-09-28'
+
 tags:
 - Company
-apis: []
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/bitbrand-hosts.yml
+- type: Vendors
+  url: vendors/bitbrand-vendors.yml
+- type: TermsOfService
+  url: https://www.bitbrand.com/terms
+- type: PrivacyPolicy
+  url: https://www.bitbrand.com/privacy
+- type: GitHubOrganization
+  url: https://github.com/Bitbrand
+- type: DomainSecurity
+  url: security/bitbrand-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.bitbrand.com/
+
+apis:
+- name: Bitbrand API
+  description: Bitbrand digital marketplace API
+  humanURL: https://www.bitbrand.com/
+  baseURL: null
+  aid: bitbrand:bitbrand-api
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: No OpenAPI or other machine-readable contract found on api.bitbrand.com or www.bitbrand.com.
+  evidence:
+  - url: https://api.bitbrand.com/openapi.json
+    status: 0
+  checked: '2026-09-28'
+x-enrichment:
+  date: '2026-09-28'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
